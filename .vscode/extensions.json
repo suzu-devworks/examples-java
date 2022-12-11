@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "vscjava.vscode-java-pack",
+    "vscjava.vscode-lombok",
+    "vscjava.vscode-gradle",
+    "shengchen.vscode-checkstyle",
+    "redhat.vscode-xml"
+  ]
+}

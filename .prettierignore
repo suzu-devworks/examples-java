@@ -1,0 +1,8 @@
+##> .prettierignore default
+# **/.git
+# **/.svn
+# **/.hg
+# **/node_modules
+
+##> User defined.
+target/

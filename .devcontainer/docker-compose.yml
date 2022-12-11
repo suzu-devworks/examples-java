@@ -1,0 +1,20 @@
+version: "3"
+services:
+  dev:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: "develop-stage"
+      args:
+        # Options to install Maven or Gradle
+        "MAVEN_VERSION": "3.8.6"
+        "GRADLE_VERSION": "7.6"
+        # For Linux, Change the permission by specifying UID / GID.
+        "USER_UID": ${VSCODE_UID:-2001}
+        "USER_GID": ${VSCODE_GID:-2001}
+    tty: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker-host.sock
+      - $HOME/.ssh:/home/vscode/.ssh
+      - ..:/workspace/examples-java
+    working_dir: /workspace/examples-java
