@@ -2,6 +2,8 @@
 
 ## Table of Contents
 
+- [Tools ...](./tools/README.md)
+
 ## The way to the present
 
 ```shell
