@@ -1,8 +1,6 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
   "files.associations": {},
   "java.codeAction.sortMembers.avoidVolatileChanges": true,
   "java.configuration.updateBuildConfiguration": "automatic",
@@ -10,5 +8,9 @@
   "java.format.settings.profile": "Google Style",
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
-  }
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "prettier.printWidth": 100
 }
