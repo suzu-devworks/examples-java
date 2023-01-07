@@ -11,6 +11,7 @@
 
     <modules>
         <module>modules/examples-core</module>
+        <module>modules/examples-various</module>
     </modules>
 
 </project>
