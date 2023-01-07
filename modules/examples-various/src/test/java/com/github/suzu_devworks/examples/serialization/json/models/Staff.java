@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.TimeZone;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.gson.annotations.Expose;
+import com.github.suzu_devworks.examples.serialization.gson.Exclude;
 
 import lombok.Data;
 
@@ -22,5 +24,7 @@ public class Staff {
     private ZonedDateTime lastUpdateAt;
 
     @JsonIgnore
+    @Exclude
+    @Expose(serialize = false, deserialize = false) // not work.
     private TimeZone localeTimeZone;
 }
