@@ -12,5 +12,6 @@
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
-  "prettier.printWidth": 100
+  "prettier.printWidth": 100,
+  "java.debug.settings.onBuildFailureProceed": true
 }
