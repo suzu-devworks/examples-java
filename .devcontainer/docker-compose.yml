@@ -7,7 +7,7 @@ services:
       target: "develop-stage"
       args:
         # Options to install Maven or Gradle
-        "MAVEN_VERSION": "3.8.6"
+        "MAVEN_VERSION": "3.8.7"
         "GRADLE_VERSION": "7.6"
         # For Linux, Change the permission by specifying UID / GID.
         "USER_UID": ${VSCODE_UID:-2001}

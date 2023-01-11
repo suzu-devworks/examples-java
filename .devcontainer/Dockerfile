@@ -23,7 +23,7 @@ RUN set -x \
     ;
 
 # Configure Maven
-ARG MAVEN_VERSION=3.8.6
+ARG MAVEN_VERSION=3.8.7
 ARG MAVEN_BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 ENV MAVEN_HOME /opt/maven
 RUN set -x \
