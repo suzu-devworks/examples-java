@@ -33,10 +33,12 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.Callable;
 
+import javax.sql.PooledConnection;
+
 import org.assertj.db.type.Changes;
 import org.assertj.db.type.DateValue;
 import org.assertj.db.type.Source;
-import org.h2.jdbcx.JdbcConnectionPool;
+import org.h2.jdbcx.JdbcDataSource;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -56,7 +58,7 @@ public class JdbcTests {
 
     // use JDBC connection pool
     private static final boolean useConnectionPooling = true;
-    private static JdbcConnectionPool connectionPool;
+    private static PooledConnection connectionPool;
 
     // use dbsetup
     private static DbSetupTracker dbSetupTracker = new DbSetupTracker();
@@ -66,14 +68,20 @@ public class JdbcTests {
     private static Source dbSource;
 
     @BeforeAll
-    static void setup() throws IOException {
+    static void setup() throws IOException, SQLException {
         final var properties = getProperties();
         final var url = properties.getProperty("jdbc.connection.url");
         final var user = properties.getProperty("jdbc.connection.username");
         final var pass = properties.getProperty("jdbc.connection.password");
 
-        connectionPool = JdbcConnectionPool.create(url, user, pass);
-        connectionSupplier = useConnectionPooling ? () -> connectionPool.getConnection()
+        var dataSource = new JdbcDataSource();
+        dataSource.setUrl(url);
+        dataSource.setUser(user);
+        dataSource.setPassword(pass);
+        connectionPool = dataSource.getPooledConnection();
+
+        connectionSupplier = useConnectionPooling
+                ? () -> connectionPool.getConnection()
                 : () -> DriverManager.getConnection(url, user, pass);
 
         destination = new DriverManagerDestination(url, user, pass);
@@ -97,9 +105,6 @@ public class JdbcTests {
 
     @AfterAll
     static void tearDown() {
-        if (connectionPool != null) {
-            connectionPool.dispose();
-        }
     }
 
     @BeforeEach
