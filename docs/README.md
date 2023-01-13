@@ -26,4 +26,12 @@ mvn archetype:generate \
   -DartifactId=examples-core \
   -DoutputDirectory=modules
 
+mvn archetype:generate \
+  -DarchetypeArtifactId=maven-archetype-quickstart \
+  -DinteractiveMode=false \
+  -DgroupId=com.github.suzu_devworks \
+  -Dpackage=com.github.suzu_devworks.examples \
+  -DartifactId=examples-various \
+  -DoutputDirectory=modules
+
 ```
