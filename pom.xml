@@ -10,8 +10,7 @@
     <name>examples-java</name>
 
     <modules>
-        <module>modules/examples-core</module>
-        <module>modules/examples-various</module>
+        <module>modules</module>
     </modules>
 
 </project>
