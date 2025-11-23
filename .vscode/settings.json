@@ -1,0 +1,27 @@
+{
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "explicit"
+    },
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "files.associations": {
+    ".dockerignore": "ignore"
+  },
+  "java.codeAction.sortMembers.avoidVolatileChanges": true,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.format.settings.profile": "Google Style",
+  "java.format.settings.url": "https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml",
+  "markdownlint.config": {}
+}
