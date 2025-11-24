@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolchains>
+    <toolchain>
+        <type>jdk</type>
+        <provides>
+            <version>25</version>
+            <vendor>any</vendor>
+        </provides>
+        <configuration>
+            <!--
+        Optionally set <jdkHome> to the path of a JDK 21 installation on
+        this machine or CI. If omitted, Maven will try to locate a matching
+        JDK installed on the system (or use user's ~/.m2/toolchains.xml).
+        Example:
+        <jdkHome>/usr/lib/jvm/jdk-21</jdkHome>
+      -->
+        </configuration>
+    </toolchain>
+</toolchains>
