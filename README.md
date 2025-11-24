@@ -1,5 +1,7 @@
 # examples-java
 
+[![CodeQL](https://github.com/suzu-devworks/examples-java/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/suzu-devworks/examples-java/actions/workflows/github-code-scanning/codeql)
+
 ## What is the purpose of this repository?
 
 This repository serves as my personal sandbox for learning and experimenting with database programming using Java.
