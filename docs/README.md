@@ -39,4 +39,6 @@ mvn archetype:generate \
   -DoutputDirectory=modules \
   -DinteractiveMode=false
 
+# Update outdated package
+mvn versions:display-dependency-updates
 ```
